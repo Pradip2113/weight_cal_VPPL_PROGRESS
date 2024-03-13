@@ -1,0 +1,89 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{date}-{weight_bridge_no}-{user_name}",
+ "creation": "2023-03-15 14:45:10.346236",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "operator_name",
+  "weight_bridge_no",
+  "column_break_3",
+  "user_name",
+  "date"
+ ],
+ "fields": [
+  {
+   "fieldname": "operator_name",
+   "fieldtype": "Link",
+   "label": "Operator ID",
+   "options": "User"
+  },
+  {
+   "fieldname": "weight_bridge_no",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Weight Bridge No",
+   "options": "\nWeight Bridge 1\nWeight Bridge 2\nWeight Bridge 3\nWeight Bridge 4\nWeight Bridge 5",
+   "reqd": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "label": "Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "operator_name.full_name",
+   "fieldname": "user_name",
+   "fieldtype": "Data",
+   "label": "Operator Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Weight Bridge",
+   "link_fieldname": "operator_name"
+  },
+  {
+   "link_doctype": "Delivery Note",
+   "link_fieldname": "operator_name"
+  },
+  {
+   "link_doctype": "Purchase Receipt",
+   "link_fieldname": "operator_name"
+  }
+ ],
+ "modified": "2023-09-23 15:50:33.625472",
+ "modified_by": "Administrator",
+ "module": "Weight Cal",
+ "name": "WB Master Setting",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

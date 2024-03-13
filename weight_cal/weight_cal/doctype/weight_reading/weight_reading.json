@@ -1,0 +1,171 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-03-11 12:19:24.206400",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "wm1",
+  "wm2",
+  "wm3",
+  "wm4",
+  "wm5",
+  "column_break_yq0on",
+  "weight_readings_1",
+  "weight_readings_2",
+  "weight_readings_3",
+  "weight_readings_4",
+  "weight_readings_5",
+  "column_break_gzq83",
+  "wb1_status",
+  "wb2_status",
+  "wb3_status",
+  "wb4_status",
+  "wb5_status",
+  "column_break_gtzh2",
+  "wm1_ip",
+  "wm2_ip",
+  "wm3_ip",
+  "wm4_ip",
+  "wm5_ip"
+ ],
+ "fields": [
+  {
+   "fieldname": "wm2",
+   "fieldtype": "Data",
+   "label": "Weight Reading 2"
+  },
+  {
+   "fieldname": "wm3",
+   "fieldtype": "Data",
+   "label": "Weight Reading 3"
+  },
+  {
+   "fieldname": "wm4",
+   "fieldtype": "Data",
+   "label": "Weight Reading 4"
+  },
+  {
+   "fieldname": "wm5",
+   "fieldtype": "Data",
+   "label": "Weight Reading 5"
+  },
+  {
+   "fieldname": "wm1",
+   "fieldtype": "Data",
+   "label": "Weight Reading 1"
+  },
+  {
+   "fieldname": "column_break_yq0on",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "wb1_status",
+   "fieldtype": "Data",
+   "label": "WB1 Status"
+  },
+  {
+   "fieldname": "wb2_status",
+   "fieldtype": "Data",
+   "label": "WB2 Status"
+  },
+  {
+   "fieldname": "wb3_status",
+   "fieldtype": "Data",
+   "label": "WB3 Status"
+  },
+  {
+   "fieldname": "wb4_status",
+   "fieldtype": "Data",
+   "label": "WB4 Status"
+  },
+  {
+   "fieldname": "wb5_status",
+   "fieldtype": "Data",
+   "label": "WB5 Status"
+  },
+  {
+   "fieldname": "weight_readings_1",
+   "fieldtype": "Data",
+   "label": "Weight Reading 1-1"
+  },
+  {
+   "fieldname": "weight_readings_2",
+   "fieldtype": "Data",
+   "label": "Weight Reading 2-2"
+  },
+  {
+   "fieldname": "weight_readings_3",
+   "fieldtype": "Data",
+   "label": "Weight Reading 3-3"
+  },
+  {
+   "fieldname": "weight_readings_4",
+   "fieldtype": "Data",
+   "label": "Weight Reading 4-4"
+  },
+  {
+   "fieldname": "weight_readings_5",
+   "fieldtype": "Data",
+   "label": "Weight Reading 5-5"
+  },
+  {
+   "fieldname": "column_break_gzq83",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_gtzh2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "wm1_ip",
+   "fieldtype": "Data",
+   "label": "Weight Bridge IP 1"
+  },
+  {
+   "fieldname": "wm2_ip",
+   "fieldtype": "Data",
+   "label": "Weight Bridge IP 2"
+  },
+  {
+   "fieldname": "wm3_ip",
+   "fieldtype": "Data",
+   "label": "Weight Bridge IP 3"
+  },
+  {
+   "fieldname": "wm4_ip",
+   "fieldtype": "Data",
+   "label": "Weight Bridge IP 4"
+  },
+  {
+   "fieldname": "wm5_ip",
+   "fieldtype": "Data",
+   "label": "Weight Bridge IP 5"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-09-06 12:45:57.883821",
+ "modified_by": "Administrator",
+ "module": "Weight Cal",
+ "name": "Weight Reading",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

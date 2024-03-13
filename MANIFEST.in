@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include weight_cal *.css
+recursive-include weight_cal *.csv
+recursive-include weight_cal *.html
+recursive-include weight_cal *.ico
+recursive-include weight_cal *.js
+recursive-include weight_cal *.json
+recursive-include weight_cal *.md
+recursive-include weight_cal *.png
+recursive-include weight_cal *.py
+recursive-include weight_cal *.svg
+recursive-include weight_cal *.txt
+recursive-exclude weight_cal *.pyc

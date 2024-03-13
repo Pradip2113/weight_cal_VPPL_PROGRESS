@@ -1,0 +1,246 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-03-11 12:20:37.186090",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "operator_name",
+  "device_and_supplier_info_section",
+  "wb",
+  "column_break_2",
+  "date",
+  "column_break_q3ojo",
+  "manually_weight",
+  "info_section",
+  "party_name",
+  "customer",
+  "address",
+  "column_break_6tyl1",
+  "supplier",
+  "vehicle_no",
+  "section_break_4",
+  "loaded_weight",
+  "get_loaded_weight",
+  "column_break_6",
+  "column_break_hwksi",
+  "set_weight_qty",
+  "reason",
+  "column_break_iwjnr",
+  "column_break_tm7x4",
+  "empty_weight",
+  "get_empty_weight",
+  "section_break_9",
+  "actual_weight",
+  "items",
+  "user_name",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "wb",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Selected Weight Bridge",
+   "options": "Weight Bridges"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Weight Bridge Reading"
+  },
+  {
+   "fieldname": "loaded_weight",
+   "fieldtype": "Float",
+   "label": "Gross Weight",
+   "reqd": 1
+  },
+  {
+   "fieldname": "get_loaded_weight",
+   "fieldtype": "Button",
+   "label": "Get Gross Weight"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "empty_weight",
+   "fieldtype": "Float",
+   "label": "Tear Weight",
+   "reqd": 1
+  },
+  {
+   "fieldname": "get_empty_weight",
+   "fieldtype": "Button",
+   "label": "Get Tear Weight"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "actual_weight",
+   "fieldtype": "Float",
+   "label": "Net Weight",
+   "reqd": 1
+  },
+  {
+   "fieldname": "device_and_supplier_info_section",
+   "fieldtype": "Section Break",
+   "label": "Device and Other Info"
+  },
+  {
+   "default": "Now",
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "label": "Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "operator_name",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Operator Name",
+   "options": "WB Master Setting"
+  },
+  {
+   "fieldname": "user_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "user name"
+  },
+  {
+   "fieldname": "info_section",
+   "fieldtype": "Section Break",
+   "label": "Info"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fetch_from": "customer.primary_address",
+   "fieldname": "address",
+   "fieldtype": "Text",
+   "label": "Address",
+   "read_only": 1
+  },
+  {
+   "allow_bulk_edit": 1,
+   "allow_on_submit": 1,
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Delivery Note Item"
+  },
+  {
+   "fieldname": "party_name",
+   "fieldtype": "Data",
+   "label": "Party Name"
+  },
+  {
+   "fieldname": "column_break_6tyl1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Weight Bridge",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "vehicle_no",
+   "fieldtype": "Data",
+   "label": "Vehicle No"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "naming series",
+   "options": "W-"
+  },
+  {
+   "fieldname": "column_break_hwksi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "set_weight_qty",
+   "fieldtype": "Button",
+   "label": "Set Weight Qty"
+  },
+  {
+   "fieldname": "column_break_iwjnr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tm7x4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_q3ojo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "manually_weight",
+   "fieldtype": "Check",
+   "label": "Manually Weight"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-08-17 17:14:06.100929",
+ "modified_by": "Administrator",
+ "module": "Weight Cal",
+ "name": "Weight Bridge",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "set_user_permissions": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

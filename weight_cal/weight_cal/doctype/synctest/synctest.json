@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "autoname": "ST.#",
+ "creation": "2023-05-10 11:31:33.481680",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "itemname",
+  "season",
+  "plot_no",
+  "weight",
+  "amended_from",
+  "uin"
+ ],
+ "fields": [
+  {
+   "fieldname": "itemname",
+   "fieldtype": "Data",
+   "label": "ItemName",
+   "unique": 1
+  },
+  {
+   "fieldname": "season",
+   "fieldtype": "Data",
+   "label": "Season"
+  },
+  {
+   "fieldname": "plot_no",
+   "fieldtype": "Int",
+   "label": "Plot No"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "SyncTest",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "uin",
+   "fieldtype": "Data",
+   "ignore_user_permissions": 1,
+   "label": "UIN"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-05-13 17:39:31.680669",
+ "modified_by": "Administrator",
+ "module": "Weight Cal",
+ "name": "SyncTest",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

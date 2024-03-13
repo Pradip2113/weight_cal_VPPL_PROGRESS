@@ -1,0 +1,116 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-05-13 11:56:57.912263",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "policy_number",
+  "date_of_commitment",
+  "plan_and_term",
+  "sum_assured",
+  "column_break_jxvfh",
+  "premium",
+  "maturity_date",
+  "deduction_mode",
+  "remaining_amount",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "policy_number",
+   "fieldtype": "Data",
+   "label": "Policy Number"
+  },
+  {
+   "fieldname": "date_of_commitment",
+   "fieldtype": "Data",
+   "label": "Date Of Commitment"
+  },
+  {
+   "fieldname": "plan_and_term",
+   "fieldtype": "Data",
+   "label": "Plan and Term"
+  },
+  {
+   "fieldname": "sum_assured",
+   "fieldtype": "Data",
+   "label": "Sum Assured"
+  },
+  {
+   "fieldname": "column_break_jxvfh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "premium",
+   "fieldtype": "Data",
+   "label": "Premium"
+  },
+  {
+   "fieldname": "maturity_date",
+   "fieldtype": "Date",
+   "label": "Maturity Date"
+  },
+  {
+   "fieldname": "deduction_mode",
+   "fieldtype": "Select",
+   "label": "Deduction Mode",
+   "options": "Yearly\nMonthly"
+  },
+  {
+   "fieldname": "remaining_amount",
+   "fieldtype": "Data",
+   "label": "Remaining Amount"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Life Insurence",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-08-03 11:05:34.531662",
+ "modified_by": "Administrator",
+ "module": "Weight Cal",
+ "name": "Life Insurence",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

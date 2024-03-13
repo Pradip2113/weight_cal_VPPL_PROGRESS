@@ -1,0 +1,735 @@
+{
+ "actions": [],
+ "creation": "2023-05-08 12:04:54.001228",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "season",
+  "column_break_n4bxl",
+  "trip_sheet_no",
+  "column_break_dnf5s",
+  "branch",
+  "column_break_g7pew",
+  "cane_weight_no",
+  "column_break_rrmcc",
+  "shft",
+  "column_break_c2zme",
+  "date",
+  "time",
+  "section_break_nu6qb",
+  "operator_name",
+  "wb",
+  "column_break_my8tj",
+  "loaded_weight",
+  "gross_weight_timedate",
+  "manually_weight",
+  "column_break_rof0z",
+  "get_loaded_weight",
+  "column_break_me50q",
+  "empty_weight",
+  "tear_weight_timedate",
+  "manually_tear_weight",
+  "column_break_fapxz",
+  "get_empty_weight",
+  "water_supplier_weight",
+  "column_break_gbpd2",
+  "binding_weight",
+  "actual_weight",
+  "user_name",
+  "section_break_fizrl",
+  "plot_no",
+  "column_break_zbqof",
+  "farmer_name",
+  "column_break_njeus",
+  "transporter_name",
+  "column_break_8qyhb",
+  "harvester_name",
+  "column_break_5xknj",
+  "slip_no",
+  "column_break_hdkfn",
+  "cart_number",
+  "section_break_eqeka",
+  "farmer_village",
+  "area_acre",
+  "burn_cane",
+  "route_code",
+  "column_break_9npn6",
+  "farmer_code",
+  "cane_variety",
+  "plantation_date",
+  "survery_no",
+  "column_break_tbp8h",
+  "contract_id",
+  "route_name",
+  "distance",
+  "percentage",
+  "column_break_udht1",
+  "harvester_code",
+  "harvester_contract",
+  "vehicle_type",
+  "gang_type",
+  "is_kisan_card",
+  "column_break_ivlns",
+  "vehicle_number",
+  "tolly_1",
+  "tolly_2",
+  "rope",
+  "column_break_nl44b",
+  "cane_inward_no",
+  "season_day",
+  "slip_date",
+  "village",
+  "state",
+  "section_break_uoiyk",
+  "slip_boy",
+  "column_break_4xh55",
+  "harvester_status",
+  "column_break_vmgct",
+  "billing_status",
+  "purchase_receipt_status",
+  "h_and_t_billing_status",
+  "column_break_xprgm",
+  "section_break_fdjru",
+  "purchase_receipt",
+  "purchase_invoice",
+  "section_break_paqah",
+  "water_supplier_code",
+  "column_break_c2nel",
+  "water_supplier_name",
+  "column_break_drpjg",
+  "water_share",
+  "column_break_znamt",
+  "weight_partner_status",
+  "uin",
+  "transporter_code",
+  "section_break_x8gj7",
+  "penalty_charges",
+  "weight_flag",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "allow_on_submit": 1,
+   "fieldname": "season",
+   "fieldtype": "Link",
+   "label": "Season",
+   "options": "Season"
+  },
+  {
+   "fieldname": "column_break_9npn6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "season_day",
+   "fieldtype": "Float",
+   "label": "Season Day",
+   "precision": "0"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_tbp8h",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shft",
+   "fieldtype": "Data",
+   "label": "Shift",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "slip_date",
+   "fieldtype": "Date",
+   "label": "Slip Date"
+  },
+  {
+   "fieldname": "column_break_udht1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "hidden": 1,
+   "label": "Time"
+  },
+  {
+   "fieldname": "column_break_ivlns",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_uoiyk",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fetch_from": "trip_sheet_no.plat_no_id",
+   "fieldname": "plot_no",
+   "fieldtype": "Link",
+   "label": "Plot No",
+   "options": "Cane Master"
+  },
+  {
+   "fieldname": "column_break_nl44b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "trip_sheet_no.survery_no",
+   "fieldname": "survery_no",
+   "fieldtype": "Data",
+   "label": "Survery No"
+  },
+  {
+   "fetch_from": "plot_no.area",
+   "fieldname": "village",
+   "fieldtype": "Link",
+   "label": "Village",
+   "options": "Village"
+  },
+  {
+   "fetch_from": "trip_sheet_no.area_acre",
+   "fieldname": "area_acre",
+   "fieldtype": "Float",
+   "label": "Area Acre",
+   "precision": "1"
+  },
+  {
+   "fetch_from": "trip_sheet_no.cane_variety",
+   "fieldname": "cane_variety",
+   "fieldtype": "Link",
+   "label": "Cane Variety",
+   "options": "Cane Variety"
+  },
+  {
+   "fetch_from": "trip_sheet_no.farmer_code",
+   "fieldname": "farmer_code",
+   "fieldtype": "Link",
+   "label": "Farmer Code",
+   "options": "Farmer List"
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "trip_sheet_no.vehicle_type",
+   "fieldname": "vehicle_type",
+   "fieldtype": "Link",
+   "label": "Vehicle Type",
+   "options": "Vehicle Type"
+  },
+  {
+   "fetch_from": "trip_sheet_no.farmer_name",
+   "fieldname": "farmer_name",
+   "fieldtype": "Data",
+   "label": "Farmer Name"
+  },
+  {
+   "fetch_from": "farmer_code.village",
+   "fieldname": "farmer_village",
+   "fieldtype": "Link",
+   "label": "Farmer Village",
+   "options": "Village"
+  },
+  {
+   "fetch_from": "trip_sheet_no.transporter_name",
+   "fieldname": "transporter_name",
+   "fieldtype": "Data",
+   "label": "Transporter Name"
+  },
+  {
+   "fieldname": "column_break_4xh55",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "trip_sheet_no.vehicle_number",
+   "fieldname": "vehicle_number",
+   "fieldtype": "Data",
+   "label": "Vehicle Number"
+  },
+  {
+   "fetch_from": "harvester_contract.harvester_code",
+   "fieldname": "harvester_code",
+   "fieldtype": "Data",
+   "label": "Harvester Code"
+  },
+  {
+   "fetch_from": "trip_sheet_no.harvester_name",
+   "fieldname": "harvester_name",
+   "fieldtype": "Data",
+   "label": "Harvester Name ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "route_code",
+   "fieldtype": "Data",
+   "label": "Route code"
+  },
+  {
+   "fetch_from": "trip_sheet_no.route_name",
+   "fieldname": "route_name",
+   "fieldtype": "Data",
+   "label": "Route Name"
+  },
+  {
+   "fetch_from": "trip_sheet_no.distance",
+   "fieldname": "distance",
+   "fieldtype": "Float",
+   "label": "Distance",
+   "precision": "1"
+  },
+  {
+   "fieldname": "column_break_vmgct",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "__user",
+   "fetch_from": "trip_sheet_no.slip_boy",
+   "fieldname": "slip_boy",
+   "fieldtype": "Link",
+   "label": "Slip Boy",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_xprgm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "harvester_status",
+   "fieldtype": "Select",
+   "label": "Harvester Status",
+   "options": "Start\nComplete"
+  },
+  {
+   "fetch_from": "trip_sheet_no.percentage",
+   "fieldname": "percentage",
+   "fieldtype": "Float",
+   "label": "Percentage",
+   "precision": "1"
+  },
+  {
+   "fieldname": "section_break_nu6qb",
+   "fieldtype": "Section Break",
+   "label": "Cane Weight"
+  },
+  {
+   "fieldname": "section_break_eqeka",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Cane Inward Slip Details"
+  },
+  {
+   "fieldname": "operator_name",
+   "fieldtype": "Link",
+   "label": "Operator Name",
+   "options": "WB Master Setting",
+   "read_only": 1
+  },
+  {
+   "fieldname": "wb",
+   "fieldtype": "Select",
+   "label": "Selected Weight Bridge",
+   "options": "\nWeight Bridge 1\nWeight Bridge 2\nWeight Bridge 3\nWeight Bridge 4\nWeight Bridge 5",
+   "read_only": 1
+  },
+  {
+   "fieldname": "loaded_weight",
+   "fieldtype": "Float",
+   "label": "Gross Weight",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_rof0z",
+   "fieldtype": "Column Break",
+   "label": " "
+  },
+  {
+   "depends_on": "eval:doc.weight_flag == 0 ",
+   "fieldname": "get_loaded_weight",
+   "fieldtype": "Button",
+   "label": "Get Gross Weight"
+  },
+  {
+   "fieldname": "column_break_me50q",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "empty_weight",
+   "fieldtype": "Float",
+   "label": "Tear Weight",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_fapxz",
+   "fieldtype": "Column Break",
+   "label": " "
+  },
+  {
+   "depends_on": "eval:doc.weight_flag == 1  && doc.loaded_weight != 0",
+   "fieldname": "get_empty_weight",
+   "fieldtype": "Button",
+   "label": "Get Tear Weight"
+  },
+  {
+   "fieldname": "column_break_gbpd2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "actual_weight",
+   "fieldtype": "Float",
+   "label": "Net Weight"
+  },
+  {
+   "fieldname": "user_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "user name"
+  },
+  {
+   "fieldname": "column_break_my8tj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "billing_status",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Billing Status"
+  },
+  {
+   "default": "0",
+   "fieldname": "purchase_receipt_status",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Purchase Receipt Status"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Bedkihal",
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "cane_weight_no",
+   "fieldtype": "Float",
+   "label": "Cane Weight No",
+   "precision": "0",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_n4bxl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_dnf5s",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_g7pew",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_rrmcc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "binding_weight",
+   "fieldtype": "Float",
+   "label": "Binding Weight(KG)"
+  },
+  {
+   "fieldname": "trip_sheet_no",
+   "fieldtype": "Link",
+   "label": "Trip Sheet No",
+   "options": "Trip Sheet"
+  },
+  {
+   "fetch_from": "trip_sheet_no.plantation_date",
+   "fieldname": "plantation_date",
+   "fieldtype": "Date",
+   "label": "Plantation Date "
+  },
+  {
+   "fetch_from": "trip_sheet_no.burn_cane",
+   "fieldname": "burn_cane",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Cane Deduction Type",
+   "options": "Matured Cane\nBurn Cane\nUnmatured Cane",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "trip_sheet_no.transporter_code",
+   "fieldname": "contract_id",
+   "fieldtype": "Link",
+   "label": "Transporter Code ",
+   "options": "H and T Contract"
+  },
+  {
+   "fetch_from": "trip_sheet_no.gang_type",
+   "fieldname": "gang_type",
+   "fieldtype": "Link",
+   "label": "Gang Type",
+   "options": "Gang Type"
+  },
+  {
+   "fetch_from": "trip_sheet_no.tolly_1",
+   "fieldname": "tolly_1",
+   "fieldtype": "Data",
+   "label": "Tolly 1"
+  },
+  {
+   "fetch_from": "trip_sheet_no.tolly_2",
+   "fieldname": "tolly_2",
+   "fieldtype": "Data",
+   "label": "Tolly 2"
+  },
+  {
+   "fetch_from": "trip_sheet_no.rope",
+   "fieldname": "rope",
+   "fieldtype": "Select",
+   "label": "Rope",
+   "options": "All\ntrailor 1 st\ntrailor  2 nd\n1 st & 2 nd trailor  upper rope\n1 st and 2 nd Bottom rope\n1st trailor all & 2nd  trailor  Upper Rope\n1st trailor all & 2nd  trailor  Bottom Rope\n1st trailor  upper rope\n1st trailor  Bottom rope\n2nd trailor all & 1st  trailor  Upper Rope\n2nd trailor  Bottom rope\nTL Middle Rope\nTL Middle Rope 1\nTL Bottom Rope\nTL Bottom & Middle Rope\nTL Top& Middle Rope\n2nd trailor all & 1st trailor  upper rope\n2nd trailor upper rope\nTL Middle Rope 2"
+  },
+  {
+   "fetch_from": "plot_no.is_kisan_card",
+   "fieldname": "is_kisan_card",
+   "fieldtype": "Select",
+   "label": "is Kisan Card",
+   "options": "No\nYes"
+  },
+  {
+   "fieldname": "cane_inward_no",
+   "fieldtype": "Link",
+   "label": "Cane Inward No",
+   "options": "Cane Inward Slip"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "default": "0",
+   "fieldname": "h_and_t_billing_status",
+   "fieldtype": "Check",
+   "label": "H and T Billing Status"
+  },
+  {
+   "fieldname": "section_break_fdjru",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "purchase_receipt",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Purchase Receipt "
+  },
+  {
+   "fieldname": "purchase_invoice",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Purchase Invoice"
+  },
+  {
+   "fieldname": "section_break_paqah",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fetch_from": "trip_sheet_no.water_supplier",
+   "fieldname": "water_supplier_code",
+   "fieldtype": "Link",
+   "label": "Water Supplier Code",
+   "options": "Farmer List"
+  },
+  {
+   "fieldname": "column_break_c2nel",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "trip_sheet_no.water_supplier_name",
+   "fieldname": "water_supplier_name",
+   "fieldtype": "Data",
+   "label": "Water Supplier Name"
+  },
+  {
+   "fieldname": "column_break_drpjg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_znamt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "weight_partner_status",
+   "fieldtype": "Check",
+   "label": "Weight Partner Status"
+  },
+  {
+   "fetch_from": "trip_sheet_no.uin",
+   "fieldname": "uin",
+   "fieldtype": "Data",
+   "label": "UIN"
+  },
+  {
+   "fieldname": "gross_weight_timedate",
+   "fieldtype": "Datetime",
+   "label": "Gross Weight Time/Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tear_weight_timedate",
+   "fieldtype": "Datetime",
+   "label": "Tear Weight Time/Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "contract_id.transporter_code",
+   "fieldname": "transporter_code",
+   "fieldtype": "Data",
+   "label": "Transporter Code"
+  },
+  {
+   "fieldname": "column_break_c2zme",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "water_supplier_weight",
+   "fieldtype": "Data",
+   "label": "Water Supplier Weight",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "trip_sheet_no.water_share",
+   "fieldname": "water_share",
+   "fieldtype": "Float",
+   "label": "Water Share (%)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "trip_sheet_no.harvesting_code__ht",
+   "fieldname": "harvester_contract",
+   "fieldtype": "Link",
+   "label": "Harvester Contract",
+   "options": "H and T Contract"
+  },
+  {
+   "fieldname": "penalty_charges",
+   "fieldtype": "Table",
+   "label": "Penalty Charges",
+   "options": "Child HT Ded Amt"
+  },
+  {
+   "fieldname": "section_break_x8gj7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_fizrl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_zbqof",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_njeus",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_8qyhb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_5xknj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "trip_sheet_no.slip_no",
+   "fieldname": "slip_no",
+   "fieldtype": "Int",
+   "label": "Slip No"
+  },
+  {
+   "fieldname": "column_break_hdkfn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "trip_sheet_no.cartno",
+   "fieldname": "cart_number",
+   "fieldtype": "Float",
+   "label": "Cart Number"
+  },
+  {
+   "default": "0",
+   "fieldname": "manually_weight",
+   "fieldtype": "Check",
+   "label": "Manually  Gross Weight"
+  },
+  {
+   "default": "0",
+   "fieldname": "weight_flag",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Weight Flag"
+  },
+  {
+   "default": "0",
+   "fieldname": "manually_tear_weight",
+   "fieldtype": "Check",
+   "label": "Manually Tear Weight"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Cane Weight",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-03-01 17:16:47.539781",
+ "modified_by": "Administrator",
+ "module": "Weight Cal",
+ "name": "Cane Weight",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "slip_no",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
